@@ -1,0 +1,8 @@
+msgread : msgread.o msglib.o
+        gcc -o msgread msgread.o msglib.o
+
+msgread.o : msglib.h msgread.c
+        gcc -c -o msgread.o msgread.c
+
+msglib.o : msglib.h msglib.c
+        gcc -c -o msglib.o msglib.c

@@ -1,0 +1,8 @@
+msgclient : msgclient.o msglib.o
+        gcc -o msgclient msgclient.o msglib.o
+
+msgclient.o : msglib.h msgclient.c
+        gcc -c -o msgclient.o msgclient.c
+
+msglib.o : msglib.h msglib.c
+        gcc -c -o msglib.o msglib.c

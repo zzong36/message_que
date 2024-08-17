@@ -1,0 +1,8 @@
+msgserver : msgserver.o msglib.o
+        gcc -o msgserver msgserver.o msglib.o
+
+msgserver.o : msglib.h msgserver.c
+        gcc -c -o msgserver.o msgserver.c
+
+msglib.o : msglib.h msglib.c
+        gcc -c -o msglib.o msglib.c
